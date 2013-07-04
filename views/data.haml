@@ -1,0 +1,25 @@
+%h1 Data
+
+%h2 Año 2012
+
+%ul
+  %li
+    %strong Total muertes
+    = data.total
+  %li
+    %strong Cuántos en bicicleta:
+    #{data.bikes} (#{data.bikes * 100 / data.total}% del total)
+  %li
+    %strong Caídas
+    #{data.falls} (#{data.falls * 100 / data.bikes}% del total de accidentes en bicicleta)
+
+%p
+  Fuente:
+  %a{href: 'http://unasev.gub.uy/inicio/sinatran/datos_abiertos/2012/'}
+    Datos Abiertos de UNASEV 2012
+
+%p
+  Acá hay unos buenos datos para parsear, pero está todo en PDF, deberíamos pedirlo en formato "Datos Abiertos":
+  %br
+  %a{href: 'http://unasev.gub.uy/inicio/sinatran/informes_siniestralidad_vial_uruguay/'}
+    http://unasev.gub.uy/inicio/sinatran/informes_siniestralidad_vial_uruguay/

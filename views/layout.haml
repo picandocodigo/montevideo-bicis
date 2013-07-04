@@ -14,6 +14,17 @@
         .navbar.nabvar-inversed.nabvar-fixed-top
           .navbar-inner
             .container
-              %h1 Title
+              .row
+                .span3
+                  %h1 Title
+                .span4.offset9
+                  %ul.nav
+                    %li
+                      %a{href: "/"}
+                        Home
+                    %li
+                      %a{href: "/data"}
+                        Data
+
       .container
         = yield

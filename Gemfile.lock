@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    github-markup (0.7.5)
+    github-markup (0.7.0)
     haml (4.0.3)
       tilt
     rack (1.5.2)
@@ -17,6 +17,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-markup
-  haml
-  sinatra
+  github-markup (= 0.7)
+  haml (~> 4.0)
+  sinatra (~> 1.4)
