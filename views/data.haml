@@ -17,12 +17,13 @@
 
 %table.table.table-bordered.table-striped.table-hover.table-condensed
   %thead
-    -(0..8).each do |i|
+    -(0..9).each do |i|
       %th= data.accidents[0][i]
+    - data.accidents.delete_at(0)
   %tbody
     - data.accidents.each do |accident|
       %tr{ (accident[3] == "BICICLETA" || accident[8] == "BICICLETA") ? {class: "info"} : {}}
-        -(0..8).each do |i|
+        -(0..9).each do |i|
           %td= accident[i]
 
 %p

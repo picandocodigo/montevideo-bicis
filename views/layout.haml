@@ -1,12 +1,12 @@
 !!! 5
 %html
   %head
-    %link{rel:'stylesheet', type: 'text/css', href:'css/bootstrap.min.css'}
-    %link{rel:'stylesheet', type: 'text/css', href:'css/main.css'}
-    %link{rel:'stylesheet', type: 'text/css', href:'css/bootstrap-responsive.css'}
+    %link{rel:'stylesheet', type: 'text/css', href:'/css/bootstrap.min.css'}
+    %link{rel:'stylesheet', type: 'text/css', href:'/css/main.css'}
+    %link{rel:'stylesheet', type: 'text/css', href:'/css/bootstrap-responsive.css'}
     %meta{name: 'viewport', content:'width=device-width, initial-scale=1.0'}
-    %script{src:'./js/bootstrap.min.js'}
-    %script{src:'./js/jquery.min.js'}
+    %script{src:'/js/bootstrap.min.js'}
+    %script{src:'/js/jquery.min.js'}
     %title Montevideo Bicis
   %body
     #container
@@ -25,6 +25,9 @@
                     %li
                       %a{href: "/data"}
                         Data
+                    %li
+                      %a{href: "/leyes"}
+                        Leyes
 
       .container
         = yield
