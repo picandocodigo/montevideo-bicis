@@ -15,13 +15,13 @@
 
 %h3 Datos crudos:
 
-%table
+%table.table.table-bordered.table-striped.table-hover.table-condensed
   %thead
     -(0..8).each do |i|
       %th= data.accidents[0][i]
   %tbody
     - data.accidents.each do |accident|
-      %tr
+      %tr{ (accident[3] == "BICICLETA" || accident[8] == "BICICLETA") ? {class: "info"} : {}}
         -(0..8).each do |i|
           %td= accident[i]
 
