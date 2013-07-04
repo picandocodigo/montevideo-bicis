@@ -13,6 +13,18 @@
     %strong Caídas
     #{data.falls} (#{data.falls * 100 / data.bikes}% del total de accidentes en bicicleta)
 
+%h3 Datos crudos:
+
+%table
+  %thead
+    -(0..8).each do |i|
+      %th= data.accidents[0][i]
+  %tbody
+    - data.accidents.each do |accident|
+      %tr
+        -(0..8).each do |i|
+          %td= accident[i]
+
 %p
   Fuente:
   %a{href: 'http://unasev.gub.uy/inicio/sinatran/datos_abiertos/2012/'}
