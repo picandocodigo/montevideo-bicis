@@ -18,3 +18,7 @@ get "/leyes/:ley" do
   ley = params[:ley]
   haml :"leyes/#{ley}", layout: :layout
 end
+
+get "/participar" do
+  haml :participate
+end
