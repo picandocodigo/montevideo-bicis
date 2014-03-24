@@ -1,3 +1,9 @@
 ol.letters{
   list-style-type: upper-alpha;
 }
+
+.dropdown-menu-custom {
+    display: block;
+    float: none;
+    position: static;
+}
