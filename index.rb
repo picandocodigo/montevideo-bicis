@@ -3,22 +3,22 @@ require 'sinatra'
 require 'lib/dead_people'
 
 get "/" do
-  haml :index
+  haml :index, locals: {current_page: "home"}
 end
 
 get "/data" do
-  haml :data, locals: {data: DeadPeople.new}
+  haml :data, locals: {data: DeadPeople.new, current_page: "data"}
 end
 
 get "/leyes" do
-  haml :leyes
+  haml :leyes, locals: {current_page: "leyes"}
 end
 
 get "/leyes/:ley" do
   ley = params[:ley]
-  haml :"leyes/#{ley}", layout: :layout
+  haml :"leyes/#{ley}", layout: :layout, locals: {current_page: "leyes"}
 end
 
 get "/participar" do
-  haml :participate
+  haml :participate, locals: {current_page: "participar"}
 end
