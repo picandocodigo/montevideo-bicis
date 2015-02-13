@@ -17,6 +17,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  github-markup (= 0.7)
-  haml (~> 4.0)
-  sinatra (~> 1.4)
+  github-markup
+  haml
+  sinatra
