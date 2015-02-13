@@ -1,0 +1,12 @@
+Nombre del atributo;Descripcion;Tipo de dato;Recurso relacionado;Informaci¢n Adicional
+Fecha y hora;Fecha y hora en la que ocurrio el siniestro;Fecha/hora;Fallecidos_enero_setiembre-2013.csv;
+Departamento;Departamento donde ocurrio el siniestro de transito fatal;Texto;Fallecidos_enero_setiembre-2013.csv;
+Jurisdiccion ;"Departamental: todas aquellas vias dentro de un departamento que no son rutas nacionales; Nacional: rutas nacionales.";Texto;Fallecidos_enero_setiembre-2013.csv;
+Tipo de Siniestro;Clasificacion del siniestro;Texto;Fallecidos_enero_setiembre-2013.csv;
+Vehiculo;Vehiculo en el que circulaba la persona fallecida;Texto;Fallecidos_enero_setiembre-2013.csv;
+Rol;Rol en el transito que desempeñaba la persona cuando fallece;Texto;Fallecidos_enero_setiembre-2013.csv;
+Edad;Edad que tenia la persona fallecida al momento de ocurrido el siniestro;Numerico;Fallecidos_enero_setiembre-2013.csv;
+Sexo;Sexo de la persona fallecida. Femenino (F), Masculino (M);Texto;Fallecidos_enero_setiembre-2013.csv;
+Fallecido a los (Dias);Dias entre la ocurrencia del siniestro y el fallecimiento. 0 indica fallecido en el lugar, 1 indica que fallecio hasta un dia de ocurrido el Siniestro y asi sucesivamente.;Numerico;Fallecidos_enero_setiembre-2013.csv;
+Otro vehiculo;Otro vehiculo involucrado en el siniestro;Texto;Fallecidos_enero_setiembre-2013.csv;
+Lugar del Siniestro;Direccion o proximidad al lugar donde ocurrio el siniestro;Texto;Fallecidos_enero_setiembre-2013.csv;
