@@ -30,3 +30,8 @@ footer.footer .container{
     width: 100%;
     min-height: 500px;
 }
+
+.red, .green, .blue{font-weight: bold;}
+.red{color: #ff0000;}
+.green{color: #00ff00;}
+.blue{color: #0000ff;}

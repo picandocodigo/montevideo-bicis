@@ -24,6 +24,17 @@ Acá algunos de los datos que vengo encontrando:
 
 Se pueden pedir más datos comunicándonos con UNASEV directamente o a través de [Qué Sabés](http://quesabes.org/)
 
+## Mapa
+
+Basado en los [datos abiertos de la IM](https://catalogodatos.gub.uy/dataset/bicicircuitos-bicicletarios-estaciones-y-talleres-de-reparacion), convertir a GeoJson con `gdal-bin`:
+
+```
+$ sudo apt-get install gdal-bin
+$ ogr2ogr -f GeoJSON -t_srs crs:84 bicicircuitos.geojson v_bi_bicicircuitos.shp
+```
+
+Mover `bicicircuitos.geojson` a `public`.
+
 ## Brainstorm (ideas)
 
 ### Bolin:
