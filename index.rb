@@ -26,3 +26,7 @@ end
 get '/about' do
   haml :about, locals: {current_page: 'about'}
 end
+
+get '/mapa' do
+  haml :map, locals: {current_page: 'mapa'}
+end

@@ -1,7 +1,6 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    byebug (8.2.2)
     github-markup (1.4.0)
     haml (4.0.7)
       tilt
@@ -18,7 +17,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  byebug
   github-markup
   haml
   sinatra

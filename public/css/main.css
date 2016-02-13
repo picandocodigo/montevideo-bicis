@@ -25,3 +25,8 @@ footer{
 footer.footer .container{
     background: #e7e7e7;
 }
+
+#map{
+    width: 100%;
+    min-height: 500px;
+}
