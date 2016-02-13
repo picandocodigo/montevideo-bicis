@@ -1,13 +1,14 @@
 # Bicis en Montevideo
 
 ## Objetivo:
-Este sitio pretende presentar información objetiva sobre andar en bicicleta en Montevideo y la reglamentación (a mi juicio errada) al respecto.
-
-En principio usar los datos abiertos de la UNASEV y la IM para evaluar si existe un problema grave (ejemplo: que mueran 10 ciclistas por día por accidentes de tránsito). Dejar en evidencia que no existe infraestructura vial en Montevideo y tratar de trabajar en eso. El casco y las 4 luces exigidas por la reglamentación pueden ayudar a tener mayor seguridad, pero no salvan vidas. La idea de poner un espejo obligatorio en toda bicicleta seguramente vino de una persona que nunca usó uno.
+Este sitio pretende presentar información objetiva sobre andar en bicicleta en Montevideo y la reglamentación al respecto.
 
 ## Funcionalidades:
 
 ### Básico:
+
+Mostrar mapa con infraestructura vial en Montevideo.
+
 Mostrar la cantidad de accidentes de tránsito por año que involucren bicicletas y causas. Mostrar en un mapa la intersección (en lo posible, si no lo encuentra automáticamente, poder editar la ubicación).
 
 ### Otros
@@ -17,7 +18,8 @@ Agregar información (noticias, artículos, etc.) que van sacando los entes sobr
 
 Acá algunos de los datos que vengo encontrando:
 
-  * [2012](http://unasev.gub.uy/inicio/sinatran/datos_abiertos/2012/) - Fallecidos 2012
+  * https://catalogodatos.gub.uy/dataset/bicicircuitos-bicicletarios-estaciones-y-talleres-de-reparacion
+  * [2012](http://unasev.gub.uy/inicio/sinatran/datons_abiertos/2012/) - Fallecidos 2012
   * [2011](http://unasev.gub.uy/inicio/sinatran/datos_abiertos/2011/) - Heridos y Fallecidos, Fallecidos por Departamento por mes, Fallecidos por Jurisdicción.
 
 Se pueden pedir más datos comunicándonos con UNASEV directamente o a través de [Qué Sabés](http://quesabes.org/)
