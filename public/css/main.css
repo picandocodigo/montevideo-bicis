@@ -1,9 +1,27 @@
+body{
+  background: url(/img/bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container.main{
+    background: #efefef;
+}
+
 ol.letters{
   list-style-type: upper-alpha;
 }
+footer.footer .text{
+    margin: 40px 0;
+    text-align: center;
+}
 
-.dropdown-menu-custom {
-    display: block;
-    float: none;
-    position: static;
+footer{
+    width: 100%;
+}
+
+footer.footer .container{
+    background: #e7e7e7;
 }

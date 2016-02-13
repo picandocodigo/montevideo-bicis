@@ -1,34 +1,49 @@
 !!! 5
 %html
   %head
-    %link{rel:'stylesheet', type: 'text/css', href:'/css/main.css'}
-    %link{rel:"stylesheet", href:"//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css", type: "text/css"}
-    %meta{name: 'viewport', content:'width=device-width, initial-scale=1.0'}
-    %script{src:'/js/jquery.js'}
+    %link{ rel:'stylesheet', type: 'text/css', href:'/css/main.css' }
+    %link{rel:"stylesheet", href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity: "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin: "anonymous"}
+    %meta{ name: 'viewport', content:'width=device-width, initial-scale=1.0' }
+    %script{ src:'/js/jquery.js' }
+    %script{ src:'/js/bootstrap.js' }
     %title Montevideo Bicis
   %body
-    #container
+    .container.main
       %header
-        .navbar.nabvar-inversed.nabvar-fixed-top
-          .navbar-inner
-            .container
-              .row
-                .span5.page-header
-                  %h1 Montevideo Bicis
-                .span4.offset7
-                  %ul.nav.nav-tabs.nav-justified
-                    %li{current_page == "home" ? {class: "active"} : {}}
-                      %a{href: "/"}
-                        Home
-                    %li{current_page == "data" ? {class: "active"} : {}}
-                      %a{href: "/data"}
-                        Data
-                    %li{current_page == "leyes" ? {class: "active"} : {}}
-                      %a{href: "/leyes"}
-                        Leyes
-                    %li{current_page == "participar" ? {class: "active"} : {}}
-                      %a{href: "/participar"}
-                        Participar
-
-      .container
-        = yield
+        .span5.page-header
+          %h1 Montevideo Bicis
+        .navbar.navbar-default
+          .container
+            .row
+              .span4.offset7
+                %ul.nav.navbar-nav
+                  %li{current_page == "home" ? {class: "active"} : {}}
+                    %a{href: "/"}
+                      Home
+                  %li{current_page == "data" ? {class: "active"} : {}}
+                    %a{href: "/data"}
+                      Datos accidentes
+                  %li{current_page == "leyes" ? {class: 'dropdown active'} : {class: 'dropdown'}}
+                    %a{href: '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', 'role' => 'button', 'aria-haspopup' => 'true', 'aria-expanded' => 'false'}
+                      Leyes
+                      %span{class: 'caret'}
+                    %ul.dropdown-menu
+                      %li
+                        %a{href: '/leyes/18191'}
+                          Ley Nº 18191 - Tránsito y seguridad vial en el territorio nacional
+                      %li
+                        %a{href: '/leyes/19061'}
+                          Ley Nº 19061 - Normas complementarias a la ley Nº 18191
+                  %li{current_page == "participar" ? {class: "active"} : {}}
+                    %a{href: "/participar"}
+                      Sitios de interés
+                  %li{current_page == 'about' ? {class: 'active'} : {}}
+                    %a{href: '/about'}
+                      Acerca de
+      = yield
+  %footer.footer
+    .container
+      %p.text
+        Desarrollado por
+        %a{href: 'http://fernandobriano.com'}
+          Fernando Briano

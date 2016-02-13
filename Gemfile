@@ -1,6 +1,7 @@
-ruby '2.2.0'
+ruby '2.2.4'
 source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'haml'
 gem 'github-markup'
+gem 'byebug'
