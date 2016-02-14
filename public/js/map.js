@@ -17,3 +17,26 @@ $.getJSON("/bicicircuitos.geojson", function(data) {
     }
   }).addTo(map);
 });
+
+var bicicletario = new L.icon({
+  iconUrl: '/img/leaflet/bicicletario.png',
+  iconSize: [30, 30],
+  iconAnchor: [30, 30],
+  popupAnchor: [-3, -76],
+  shadowUrl: '/img/leaflet/marker-shadow.png',
+});
+
+$.getJSON("/bicicletarios.geojson", function(data) {
+  L.geoJson(data, {
+    pointToLayer: function(feature, latlng){
+      return L.marker(latlng, {icon: bicicletario});
+    },
+    onEachFeature: function(feature, layer){
+      var bicicletarioPopup = "<h5>Bicicletario</h5>Cantidad: " + feature.properties.CANTIDAD +
+          "<br>Ubicación bicis: " + feature.properties.UBIC_BICIC +
+          "<br>Nombre de ubicación: " + feature.properties.NOMBRE_UBI +
+          "<br>GID: " + feature.properties.GID;
+      layer.bindPopup(bicicletarioPopup, {offset: new L.Point(-15, -25)});
+    }
+  }).addTo(map);
+});
