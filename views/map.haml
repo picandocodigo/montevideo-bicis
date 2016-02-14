@@ -3,13 +3,24 @@
   El mapa cuenta con la siguiente información:
   %ul
     %li
-      Trayectos de los Bicicircuitos presentes en Montevideo. Los bicicircuitos están categorizados en: <span class='blue'>Ciclovías</span> (separación física en la calzada), <span class='green'>Bicisenda</span> (senda sobre vereda) ó <span class='red'>Calles 30 km/h</span>.
+      Trayectos de los Bicicircuitos presentes en Montevideo. Los bicicircuitos están categorizados en:
+      %ul
+        %li
+          <span class='blue'>Ciclovías</span> (separación física en la calzada)
+        %li
+          <span class='green'>Bicisenda</span> (senda sobre vereda)
+        %li
+          <span class='red'>Calles 30 km/h</span>.
       %li
         Bicicletarios dónde se puede dejar "estacionada" la bicicleta particular. Se dispone información de la cantidad de módulos y si se encuentra en vereda o en calzada.
+      %li
+        Estaciones <a href="http://movete.montevideo.gub.uy/" target="_blank">Movete</a> de préstamo de bicicletas públicas.
       %li
         Talleres particulares de reparación de bicicletas.
 #map
 
 %script{src: "js/leaflet.js"}
+%script{src: "js/easy-button.js"}
 %script{src: "js/map.js"}
 %link{rel: 'stylesheet', href:'css/leaflet.css'}
+%link{rel: 'stylesheet', href:'css/easy-button.css'}

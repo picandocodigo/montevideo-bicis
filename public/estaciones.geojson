@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "GID": 1.000000, "CANTIDAD": 12.000000, "OBSERVACIO": null, "HORA_INI": null, "HORA_FIN": null, "ACTIVO": "Si" }, "geometry": { "type": "Point", "coordinates": [ -56.200797730487103, -34.907958757098328 ] } },
+{ "type": "Feature", "properties": { "GID": 2.000000, "CANTIDAD": 12.000000, "OBSERVACIO": null, "HORA_INI": null, "HORA_FIN": null, "ACTIVO": "Si" }, "geometry": { "type": "Point", "coordinates": [ -56.204195853632775, -34.909375869976387 ] } },
+{ "type": "Feature", "properties": { "GID": 3.000000, "CANTIDAD": 12.000000, "OBSERVACIO": null, "HORA_INI": null, "HORA_FIN": null, "ACTIVO": "Si" }, "geometry": { "type": "Point", "coordinates": [ -56.209196998490384, -34.910918690718283 ] } },
+{ "type": "Feature", "properties": { "GID": 4.000000, "CANTIDAD": 12.000000, "OBSERVACIO": null, "HORA_INI": null, "HORA_FIN": null, "ACTIVO": "Si" }, "geometry": { "type": "Point", "coordinates": [ -56.212120738247265, -34.908714367820416 ] } },
+{ "type": "Feature", "properties": { "GID": 5.000000, "CANTIDAD": 12.000000, "OBSERVACIO": null, "HORA_INI": null, "HORA_FIN": null, "ACTIVO": "Si" }, "geometry": { "type": "Point", "coordinates": [ -56.211381409493619, -34.906150663875934 ] } },
+{ "type": "Feature", "properties": { "GID": 6.000000, "CANTIDAD": 12.000000, "OBSERVACIO": null, "HORA_INI": null, "HORA_FIN": null, "ACTIVO": "Si" }, "geometry": { "type": "Point", "coordinates": [ -56.207550393815772, -34.904741416784553 ] } },
+{ "type": "Feature", "properties": { "GID": 7.000000, "CANTIDAD": 12.000000, "OBSERVACIO": null, "HORA_INI": null, "HORA_FIN": null, "ACTIVO": "Si" }, "geometry": { "type": "Point", "coordinates": [ -56.203360399408439, -34.906245174150726 ] } },
+{ "type": "Feature", "properties": { "GID": 8.000000, "CANTIDAD": 12.000000, "OBSERVACIO": null, "HORA_INI": null, "HORA_FIN": null, "ACTIVO": "Si" }, "geometry": { "type": "Point", "coordinates": [ -56.203188942014819, -34.902909079849913 ] } }
+]
+}
