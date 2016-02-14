@@ -26,6 +26,14 @@ var bicicletario = new L.icon({
   shadowUrl: '/img/leaflet/marker-shadow.png',
 });
 
+var taller = new L.icon({
+  iconUrl: '/img/leaflet/taller.png',
+  iconSize: [30, 30],
+  iconAnchor: [30, 30],
+  popupAnchor: [-3, -76],
+  shadowUrl: '/img/leaflet/marker-shadow.png',
+});
+
 $.getJSON("/bicicletarios.geojson", function(data) {
   L.geoJson(data, {
     pointToLayer: function(feature, latlng){
@@ -36,6 +44,19 @@ $.getJSON("/bicicletarios.geojson", function(data) {
           "<br>Ubicación bicis: " + feature.properties.UBIC_BICIC +
           "<br>Nombre de ubicación: " + feature.properties.NOMBRE_UBI +
           "<br>GID: " + feature.properties.GID;
+      layer.bindPopup(bicicletarioPopup, {offset: new L.Point(-15, -25)});
+    }
+  }).addTo(map);
+});
+
+$.getJSON("/talleres.geojson", function(data) {
+  L.geoJson(data, {
+    pointToLayer: function(feature, latlng){
+      return L.marker(latlng, {icon: taller});
+    },
+    onEachFeature: function(feature, layer){
+      var bicicletarioPopup = "<h5>Taller</h5><br>" +
+          "Nombre: " + feature.properties.NOMBRE;
       layer.bindPopup(bicicletarioPopup, {offset: new L.Point(-15, -25)});
     }
   }).addTo(map);
