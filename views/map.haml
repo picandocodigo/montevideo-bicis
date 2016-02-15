@@ -19,6 +19,21 @@
         Talleres particulares de reparación de bicicletas.
 #map
 
+%p
+  La información mostrada está basada en <a href="https://catalogodatos.gub.uy/dataset/bicicircuitos-bicicletarios-estaciones-y-talleres-de-reparacion" target="_blank">Datos Abiertos de la Intendencia de Montevideo</a>. Dichos datos se liberan en formato shapefile y son convertidos a GeoJSON para este mapa. Pueden encontrar los datos en formato GeoJSON en los siguientes enlaces:
+%ul
+  %li
+    %a{href:"/bicicircuitos.geojson"}
+      Bicicircuitos
+  %li
+    %a{href:"/bicicletarios.geojson"}
+      Bicicletarios
+  %li
+    %a{href:"/estaciones.geojson"}
+      Estaciones Movete
+  %li
+    %a{href:"/talleres.geojson"}
+      Talleres de reparación
 %script{src: "js/leaflet.js"}
 %script{src: "js/easy-button.js"}
 %script{src: "js/map.js"}
