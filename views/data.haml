@@ -1,30 +1,8 @@
-%h2 Data
+%h2 Datos de personas fallecidas en accidentes de tránsito
 
-%h3 Año 2012
-
-%ul
-  %li
-    %strong Total muertes
-    = data.total
-  %li
-    %strong Cuántos en bicicleta:
-    #{data.bikes} (#{data.bikes * 100 / data.total}% del total)
-  %li
-    %strong Caídas
-    #{data.falls} (#{data.falls * 100 / data.bikes}% del total de accidentes en bicicleta)
-
-%h4 Datos crudos:
-
-%table.table.table-bordered.table-striped.table-hover.table-condensed
-  %thead
-    -(0..9).each do |i|
-      %th= data.accidents[0][i]
-    - data.accidents.delete_at(0)
-  %tbody
-    - data.accidents.each do |accident|
-      %tr{ (accident[3] == "BICICLETA" || accident[8] == "BICICLETA") ? {class: "info"} : {}}
-        -(0..9).each do |i|
-          %td= accident[i]
+= haml :d2014, locals: {data: d2014}
+= haml :d2013, locals: {data: d2013}
+= haml :d2012, locals: {data: d2012}
 
 %p
   Fuente:
@@ -32,7 +10,7 @@
     Datos Abiertos de UNASEV 2012
 
 %p
-  Acá hay unos buenos datos para parsear, pero está todo en PDF, deberíamos pedirlo en formato "Datos Abiertos":
+  Otros datos que se podrían parsear, pero están en PDF, deberíamos pedirlo en formato "Datos Abiertos":
   %br
   %a{href: 'http://unasev.gub.uy/inicio/sinatran/informes_siniestralidad_vial_uruguay/'}
     http://unasev.gub.uy/inicio/sinatran/informes_siniestralidad_vial_uruguay/

@@ -7,7 +7,12 @@ get '/' do
 end
 
 get '/data' do
-  haml :data, locals: {data: DeadPeople.new, current_page: 'data'}
+  haml :data, locals: {
+         d2012: DeadPeople.new(2012),
+         d2013: DeadPeople.new(2013),
+         d2014: DeadPeople.new(2014),
+         current_page: 'data'
+       }
 end
 
 get '/leyes' do

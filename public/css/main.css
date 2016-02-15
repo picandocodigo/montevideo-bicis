@@ -39,3 +39,27 @@ footer.footer .container{
 div.leaflet-popup-content h5{
     font-weight: bold;
 }
+
+li.bicicletario{
+    list-style: url(/img/leaflet/btn-bicicletario.png)
+}
+
+li.movete{
+    list-style: url(/img/leaflet/btn-movete.png)
+}
+
+li.talleres{
+    list-style: url(/img/leaflet/btn-taller.png)
+}
+
+.year{
+    width: 100%;
+    background: #c8c9a7;
+    padding: 20px;
+    text-align: center;
+}
+
+#picandocodigo img{
+    float: right;
+    margin: 40px;
+}
