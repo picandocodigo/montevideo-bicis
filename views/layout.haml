@@ -27,7 +27,7 @@
                     %a{href: "/data"}
                       Datos accidentes
                   %li{current_page == "leyes" ? {class: 'dropdown active'} : {class: 'dropdown'}}
-                    %a{href: 'leyes', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', 'role' => 'button', 'aria-haspopup' => 'true', 'aria-expanded' => 'false'}
+                    %a{href: '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', 'role' => 'button', 'aria-haspopup' => 'true', 'aria-expanded' => 'false'}
                       Leyes
                       %span{class: 'caret'}
                     %ul.dropdown-menu
@@ -37,6 +37,9 @@
                       %li
                         %a{href: '/leyes/19061'}
                           Ley Nº 19061 - Normas complementarias a la ley Nº 18191
+                      %li
+                        %a{href: '/leyes/reglamento'}
+                          Reglamento Nacional de Circulación Vial
                   %li{current_page == "participar" ? {class: "active"} : {}}
                     %a{href: "/participar"}
                       Sitios de interés

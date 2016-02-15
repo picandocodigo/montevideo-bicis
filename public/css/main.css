@@ -76,3 +76,7 @@ li.talleres{
 .table tbody{
     font-size: 11px;
 }
+
+ol.reglamento{
+    list-style-type: lower-latin;
+}
