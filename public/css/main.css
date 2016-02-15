@@ -8,6 +8,7 @@ body{
 
 .container.main{
     background: #efefef;
+    padding-bottom: 40px;
 }
 
 ol.letters{
@@ -62,4 +63,8 @@ li.talleres{
 #picandocodigo img{
     float: right;
     margin: 40px;
+}
+
+#error404{
+    text-align: center;
 }

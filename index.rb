@@ -35,3 +35,8 @@ end
 get '/mapa' do
   haml :map, locals: {current_page: 'mapa'}
 end
+
+not_found do
+  status 404
+  haml :error404, locals: {current_page: '404'}
+end

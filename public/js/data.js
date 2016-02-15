@@ -30,6 +30,6 @@ var data = {
 
 var options = {
   multiTooltipTemplate: "<%= datasetLabel %> - <%= value %>"
-}
+};
 
 var chart = new Chart(ctx).Bar(data, options);
