@@ -1,5 +1,7 @@
 %h2 Datos de personas fallecidas en accidentes de tránsito
 
+<canvas id="chart" width="400" height="200"></canvas>
+
 = haml :d2014, locals: {data: d2014}
 = haml :d2013, locals: {data: d2013}
 = haml :d2012, locals: {data: d2012}
@@ -14,3 +16,5 @@
   %br
   %a{href: 'http://unasev.gub.uy/inicio/sinatran/informes_siniestralidad_vial_uruguay/'}
     http://unasev.gub.uy/inicio/sinatran/informes_siniestralidad_vial_uruguay/
+%script{src: "js/Chart.min.js"}
+%script{src: "js/data.js"}

@@ -4,10 +4,12 @@
 %ul
   %li
     %strong 💀 Total muertes en siniestros de tránsito:
-    = data.total
+    %span#2014total
+      = data.total
   %li
     %strong 🚲 Accidentes que involucraron bicicleta:
-    #{data.bikes} (#{data.bikes * 100 / data.total}% del total)
+    %span#2014bikes
+      #{data.bikes} (#{data.bikes * 100 / data.total}% del total)
   %li
     %strong Caídas
     #{data.falls} (#{data.falls * 100 / data.bikes}% del total de accidentes en bicicleta)
