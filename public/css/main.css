@@ -65,10 +65,14 @@ li.talleres{
     margin: 40px;
 }
 
-#error404{
+.center{
     text-align: center;
 }
 
 .highlight-law{
     background: #ffd;
+}
+
+.table tbody{
+    font-size: 11px;
 }

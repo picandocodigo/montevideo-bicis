@@ -1,20 +1,26 @@
 %h2 Datos de personas fallecidas en accidentes de tránsito
+.row
+  .col-md-6.center
+    <canvas id="chart" width="400" height="200"></canvas>
+  .col-md-6
+    %p
+      Fuente:
+      %a{href: 'http://unasev.gub.uy/inicio/sinatran/datos_abiertos/', target: '_blank'}
+        Datos Abiertos de UNASEV
+    %p
+      Otros datos que se podrían parsear, pero están en PDF, deberíamos pedirlo en formato "Datos Abiertos":
+      %br
+        %a{href: 'http://unasev.gub.uy/inicio/sinatran/informes_siniestralidad_vial_uruguay/'}
+          http://unasev.gub.uy/inicio/sinatran/informes_siniestralidad_vial_uruguay/
+.row
+  .col-md-12
+    = haml :d2014, locals: {data: d2014}
+.row
+  .col-md-12
+    = haml :d2013, locals: {data: d2013}
+.row
+  .col-md-12
+    = haml :d2012, locals: {data: d2012}
 
-<canvas id="chart" width="400" height="200"></canvas>
-
-= haml :d2014, locals: {data: d2014}
-= haml :d2013, locals: {data: d2013}
-= haml :d2012, locals: {data: d2012}
-
-%p
-  Fuente:
-  %a{href: 'http://unasev.gub.uy/inicio/sinatran/datos_abiertos/', target: '_blank'}
-    Datos Abiertos de UNASEV
-
-%p
-  Otros datos que se podrían parsear, pero están en PDF, deberíamos pedirlo en formato "Datos Abiertos":
-  %br
-  %a{href: 'http://unasev.gub.uy/inicio/sinatran/informes_siniestralidad_vial_uruguay/'}
-    http://unasev.gub.uy/inicio/sinatran/informes_siniestralidad_vial_uruguay/
 %script{src: "js/Chart.min.js"}
 %script{src: "js/data.js"}

@@ -14,17 +14,17 @@
     %strong Caídas
     #{data.falls} (#{data.falls * 100 / data.bikes}% del total de accidentes en bicicleta)
 
-    <a role="button" data-toggle="collapse" href="#2012" aria-expanded="true" aria-controls="">
+    <a role="button" data-toggle="collapse" href="#2014" aria-expanded="true" aria-controls="">
     <button type="button" class="btn btn-default btn-lg btn-block">Datos completos</button>
 </a>
 
-%table.table.table-bordered.table-striped.table-hover.table-condensed.collapse#2012
+%table.table.table-bordered.table-striped.table-hover.table-condensed.collapse#2014
   %thead
     -(0..11).each do |i|
       %th= data.accidents[0][i]
     - data.accidents.delete_at(0)
   %tbody
     - data.accidents.each do |accident|
-      %tr{ (accident[3] == "BICICLETA" || accident[8] == "BICICLETA") ? {class: "info"} : {}}
+      %tr{ (accident[5] == "BICICLETA" || accident[10] == "BICICLETA") ? {class: "info"} : {}}
         -(0..11).each do |i|
           %td= accident[i]
