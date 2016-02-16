@@ -6,7 +6,21 @@
     %meta{ name: 'viewport', content:'width=device-width, initial-scale=1.0' }
     %script{ src:'/js/jquery.js' }
     %script{ src:'/js/bootstrap.js' }
-    %title Montevideo Bicis
+    - title = "#{title} - Montevideo Bicis"
+    %title
+      = title
+    <meta property="og:title" content="title" />
+    <meta property="og:description" content="Montevideo Bicis" />
+    <meta property="og:type" content="website" />
+    %meta{property: 'og:url', content: request.url}
+    <meta property="og:image" content="/img/montevideo-bicis.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@picandocodigo" />
+    %meta{name: 'twitter:title', content: title}
+    %meta{name: 'twitter:description', content: 'Montevideo Bicis'}
+    %meta{name: 'twitter:image', content:"/img/montevideo-bicis.jpg"}
+
   %body
     .container.main
       %header
