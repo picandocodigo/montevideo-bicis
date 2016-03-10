@@ -85,6 +85,6 @@ table.table.data tbody{
     font-size: 18px;
 }
 
-#bike{
-    font-size: 70px;
+#logo{
+    display:none;
 }

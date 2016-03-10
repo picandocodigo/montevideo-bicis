@@ -6,7 +6,7 @@
     %meta{ name: 'viewport', content:'width=device-width, initial-scale=1.0' }
     %script{ src:'/js/jquery.js' }
     %script{ src:'/js/bootstrap.js' }
-    - title = "#{title} - Montevideo Bicis"
+    - title = "#{title} - Montevideo Bicis 🚲"
     %title
       = title
     <meta property="og:title" content="title" />
@@ -25,7 +25,9 @@
     .container.main
       %header
         .span5.page-header
-          %h1 Montevideo Bicis <span id='bike'>🚲</span>
+          %a{href: "/", title: "Montevideo Bicis - Inicio"}
+            %h1#logo Montevideo Bicis
+            %img{src:'img/logo.png', width: '295px', height: '136px'}
         .navbar.navbar-default
           .container
             .row
