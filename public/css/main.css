@@ -80,3 +80,11 @@ li.talleres{
 ol.reglamento{
     list-style-type: lower-latin;
 }
+
+table.table.data tbody{
+    font-size: 18px;
+}
+
+#bike{
+    font-size: 70px;
+}
