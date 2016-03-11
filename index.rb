@@ -10,7 +10,7 @@ get '/' do
        }
 end
 
-get '/data' do
+get '/accidentes' do
   haml :data, locals: {
          d2012: DeadPeople.new(2012),
          d2013: DeadPeople.new(2013),
@@ -35,14 +35,14 @@ get '/leyes/:ley' do
                     }
 end
 
-get '/participar' do
-  haml :participate, locals: {
-         current_page: 'participar',
+get '/enlaces' do
+  haml :enlaces, locals: {
+         current_page: 'enlaces',
          title: 'Sitios de interés'
        }
 end
 
-get '/about' do
+get '/acercade' do
   haml :about, locals: {
          current_page: 'about',
          title: 'Acerca de'

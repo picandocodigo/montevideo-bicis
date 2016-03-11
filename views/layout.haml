@@ -41,7 +41,7 @@
                     %a{href: "/mapa"}
                       Mapa
                   %li{current_page == "data" ? {class: "active"} : {}}
-                    %a{href: "/data"}
+                    %a{href: "/accidentes"}
                       Datos accidentes
                   %li{current_page == "leyes" ? {class: 'dropdown active'} : {class: 'dropdown'}}
                     %a{href: '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', 'role' => 'button', 'aria-haspopup' => 'true', 'aria-expanded' => 'false'}
@@ -57,11 +57,11 @@
                       %li
                         %a{href: '/leyes/reglamento'}
                           Reglamento Nacional de Circulación Vial
-                  %li{current_page == "participar" ? {class: "active"} : {}}
-                    %a{href: "/participar"}
+                  %li{current_page == "enlaces" ? {class: "active"} : {}}
+                    %a{href: "/enlaces"}
                       Sitios de interés
                   %li{current_page == 'about' ? {class: 'active'} : {}}
-                    %a{href: '/about'}
+                    %a{href: '/acercade'}
                       Acerca de
       = yield
   %footer.footer
