@@ -34,6 +34,13 @@ class DeadPeople
         @bikes += 1 if row[5] =~ /BICICLETA/
         @falls += 1 if row[5] =~ /BICICLETA/ && row[4] =~ /CAIDA/
       end
+    when 2015
+      CSV.foreach('data/2015.csv', col_sep: ';') do |row|
+        @accidents << row
+        @total += 1
+        @bikes += 1 if row[5] =~ /BICICLETA/
+        @falls += 1 if row[5] =~ /BICICLETA/ && row[4] =~ /CAIDA/
+      end
     end
 
   end

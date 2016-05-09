@@ -15,6 +15,7 @@ get '/accidentes' do
          d2012: DeadPeople.new(2012),
          d2013: DeadPeople.new(2013),
          d2014: DeadPeople.new(2014),
+         d2015: DeadPeople.new(2015),
          current_page: 'data',
          title: 'Datos de accidentes de tránsito en bicicleta'
        }
