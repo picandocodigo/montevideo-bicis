@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Process deaths
 require 'csv'
 class DeadPeople
@@ -18,7 +19,7 @@ class DeadPeople
       @total += 1
       @bikes += 1 if row[data[:bike_col]] =~ /BICICLETA/
       @falls += 1 if row[data[:bike_col]] =~ /BICICLETA/ &&
-                     row[data[:fall_col]] =~ /CAIDA/
+                     row[data[:fall_col]] =~ /(CAIDA|CAÍDA)/
     end
   end
 
