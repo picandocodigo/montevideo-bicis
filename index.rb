@@ -12,13 +12,16 @@ end
 
 get '/accidentes' do
   haml :data, locals: {
-         d2012: DeadPeople.new(2012),
-         d2013: DeadPeople.new(2013),
-         d2014: DeadPeople.new(2014),
-         d2015: DeadPeople.new(2015),
-         current_page: 'data',
-         title: 'Datos de accidentes de tránsito en bicicleta'
-       }
+    data: {
+      2012 => DeadPeople.new(2012),
+      2013 => DeadPeople.new(2013),
+      2014 => DeadPeople.new(2014),
+      2015 => DeadPeople.new(2015),
+      2016 => DeadPeople.new(2016),
+    },
+    current_page: 'data',
+    title: 'Datos de accidentes de tránsito en bicicleta'
+  }
 end
 
 get '/leyes' do

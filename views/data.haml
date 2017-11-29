@@ -12,18 +12,11 @@
       %br
         %a{href: 'http://unasev.gub.uy/inicio/sinatran/informes_siniestralidad_vial_uruguay/'}
           http://unasev.gub.uy/inicio/sinatran/informes_siniestralidad_vial_uruguay/
-.row
-  .col-md-12
-    = haml :d2015, locals: {data: d2015}
-.row
-  .col-md-12
-    = haml :d2014, locals: {data: d2014}
-.row
-  .col-md-12
-    = haml :d2013, locals: {data: d2013}
-.row
-  .col-md-12
-    = haml :d2012, locals: {data: d2012}
+
+- [2016, 2015, 2014, 2013, 2012].each do |year|
+  .row
+    .col-md-12
+      = haml :year_data, locals: {data: data[year], year: year}
 
 %script{src: "js/Chart.min.js"}
 %script{src: "js/data.js"}
