@@ -3,6 +3,17 @@
 ## Objetivo:
 Este sitio pretende presentar información objetiva sobre andar en bicicleta en Montevideo y la reglamentación al respecto.
 
+## Desarrollo
+
+App web simple basada en [Sinatra](http://sinatrarb.com/):
+
+```bash
+$ bundle install
+$ bundle exec shotgun
+```
+
+Ver en http://localhost:9393
+
 ## Funcionalidades:
 
 ### Básico:
