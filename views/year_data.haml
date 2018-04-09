@@ -13,12 +13,12 @@
         %strong 🚲 Accidentes que involucraron bicicleta:
       %td
         %span{id: "#{year}bikes"}
-          #{data.bikes} (#{data.bikes * 100 / data.total}% del total)
+          #{data.bikes} (#{sprintf('%.2f', data.bikes.to_f * 100.0 / data.total.to_f)}% del total)
     %tr
       %td
         %strong Caídas
       %td
-        #{data.falls} (#{data.falls * 100 / data.bikes}% del total de accidentes en bicicleta)
+        #{data.falls} (#{sprintf('%.2f', data.falls.to_f * 100 / data.bikes.to_f)}% del total de accidentes en bicicleta)
     %tr
       %td{colspan: 2}
         %a{"role" => "button",
