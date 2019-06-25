@@ -28,8 +28,8 @@ footer.footer .container{
 }
 
 #map{
-    width: 100%;
-    min-height: 500px;
+  width: 100%;
+  height: 94vh;
 }
 
 .red, .green, .blue{font-weight: bold;}
