@@ -9,10 +9,14 @@ OpenStreetMap_Mapnik.addTo(map);
 $.getJSON("/bicicircuitos.geojson", function(data) {
   L.geoJson(data, {
     style:  function(feature){
-      switch(feature.properties.TIPO_BICIC){
-      case 'Bicisenda' : return {color: "#0f0"};
-      case 'Ciclovia' : return { color: "#00f"};
-      case 'Calle 30' : return { color: "#f00"};
+      // De datos anteriores se asume:
+      // 1 - bicisenda
+      // 2 - calles 30km
+      // 3 - ciclovías
+      switch(feature.properties.TIPO){
+      case 1 : return {color: "#0f0"};
+      case 2 : return { color: "#f00"};
+      case 3 : return { color: "#00f"};
       }
     }
   }).addTo(map);
