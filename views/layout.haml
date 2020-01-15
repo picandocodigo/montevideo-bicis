@@ -1,12 +1,10 @@
-!!! 5
+<!DOCTYPE html>
 %html
   %head
-    %link{ rel:'stylesheet', type: 'text/css', href:'/css/main.css' }
-    %link{rel:"stylesheet", href: "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css", integrity: "sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7", crossorigin: "anonymous"}
+    %link{ rel: 'stylesheet', type: 'text/css', href:'/css/main.css' }
+    %link{ rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css', crossorigin: 'anonymous' }
     %meta{ name: 'viewport', content:'width=device-width, initial-scale=1.0' }
     <link rel="shortcut icon" href="/img/favicon.png" />
-    %script{ src:'/js/jquery.js' }
-    %script{ src:'/js/bootstrap.js' }
     - title = "#{title} - Montevideo Bicis 🚲"
     %title
       = title
@@ -23,56 +21,59 @@
     %meta{name: 'twitter:image', content:"/img/montevideo-bicis.jpg"}
 
   %body
-    .container.main
-      %header
-        .span5.page-header
-          %a{href: "/", title: "Montevideo Bicis - Inicio"}
-            %h1#logo Montevideo Bicis
-            %img{src:'/img/logo.png', width: '295px', height: '136px'}
-        .navbar.navbar-default
-          .container
-            .row
-              .span4.offset7
-                %ul.nav.navbar-nav
-                  %li{current_page == "home" ? {class: "active"} : {}}
-                    %a{href: "/"}
-                      Home
-                  %li{current_page == "mapa" ? {class: "active"} : {}}
-                    %a{href: "/mapa"}
-                      Mapa
-                  %li{current_page == "data" ? {class: "active"} : {}}
-                    %a{href: "/accidentes"}
-                      Datos accidentes
-                  %li{current_page == "leyes" ? {class: 'dropdown active'} : {class: 'dropdown'}}
-                    %a{href: '#', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', 'role' => 'button', 'aria-haspopup' => 'true', 'aria-expanded' => 'false'}
-                      Leyes
-                      %span{class: 'caret'}
-                    %ul.dropdown-menu
-                      %li
-                        %a{href: '/leyes/18191'}
-                          Ley Nº 18191 - Tránsito y seguridad vial en el territorio nacional
-                      %li
-                        %a{href: '/leyes/19061'}
-                          Ley Nº 19061 - Normas complementarias a la ley Nº 18191
-                      %li
-                        %a{href: '/leyes/reglamento'}
-                          Reglamento Nacional de Circulación Vial
-                  %li{current_page == "enlaces" ? {class: "active"} : {}}
-                    %a{href: "/enlaces"}
-                      Sitios de interés
-                  %li{current_page == 'about' ? {class: 'active'} : {}}
-                    %a{href: '/acercade'}
-                      Acerca de
-      = yield
-  %footer.footer
     .container
-      %p#picandocodigo
-        %a{href:'http://picandocodigo.net', target:'_blank'}
-          %img{src: '/img/picandocodigo.png'}
-      %p.text
-        Desarrollado por
-        %a{href: 'http://fernandobriano.com/es'}
-          Fernando Briano
+      %nav.navbar{role: 'navigation', 'aria-label': 'main navigation'}
+        .navbar-brand
+          %a.navbar-item{href: '/', title: 'Montevideo Bicis'}
+            %h1#logo Montevideo Bicis
+            %img{src:'/img/logo.png'}
+          %a{role: 'button', class:'navbar-burger burger', 'aria-label': 'menu', 'aria-expanded': 'false', 'data-target': 'navbar-coso'}
+            %span{'aria-hidden': true}
+            %span{'aria-hidden': true}
+            %span{'aria-hidden': true}
+
+        #navbar-coso.navbar-menu
+          .navbar-start
+            .navbar-item
+              %a{href: "/"}
+                Home
+            .navbar-item
+              %a{href: "/mapa"}
+                Mapa
+            .navbar-item
+              %a{href: "/accidentes"}
+                Datos accidentes
+            .navbar-item.has-dropdown.is-hoverable
+              .navbar-link
+                Leyes
+              .navbar-dropdown
+                %a.navbar-item{href: '/leyes/18191'}
+                  Ley Nº 18191 - Tránsito y seguridad vial en el territorio nacional
+                %a.navbar-item{href: '/leyes/19061'}
+                  Ley Nº 19061 - Normas complementarias a la ley Nº 18191
+                %a.navbar-item{href: '/leyes/reglamento'}
+                  Reglamento Nacional de Circulación Vial
+            .navbar-item
+              %a{href: "/enlaces"}
+                Sitios de interés
+            .navbar-item
+              %a{href: '/acercade'}
+                Acerca de
+    .section.section.main
+      .container
+        .content
+          = yield
+  %footer
+    .container.has-text-centered
+      .columns
+        .column.is-11
+          Desarrollado por
+          %a{href: 'http://fernandobriano.com/es'}
+            Fernando Briano
+        .column
+          %p#picandocodigo
+            %a{href:'http://picandocodigo.net', target:'_blank'}
+              %img{src: '/img/picandocodigo.png'}
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

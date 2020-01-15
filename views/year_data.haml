@@ -1,7 +1,7 @@
-%h3.year
+%h3.title.year
   = year
-%table.table.table-striped.data
-  %tbody
+%table.table.is-stripped.is-fullwidth
+  %tbody.is-size-5
     %tr
       %td
         %strong 💀 Total muertes en siniestros de tránsito:
@@ -22,18 +22,19 @@
     %tr
       %td{colspan: 2}
         %a{"role" => "button",
-           "data-toggle" => "collapse",
            href: "#" + year.to_s,
+           id: "btn_#{year.to_s}",
            "aria-expanded" => "true"}
-          <button type="button" class="btn btn-default btn-lg btn-block">Datos completos</button>
+          <button type="button" class="button is-fullwidth is-large has-text-weight-bold">Datos completos +</button>
 
-%table{class: "table table-striped table-condensed collapse", id: year}
-  %thead
-    -(0..11).each do |i|
-      %th= data.accidents[0][i]
-    - data.accidents.delete_at(0)
-  %tbody
-    - data.accidents.each do |accident|
-      %tr{ (accident[5] == "BICICLETA" || accident[10] == "BICICLETA") ? {class: "info"} : {}}
-        -(0..11).each do |i|
-          %td= accident[i]
+.table-container.hidden{id: "table_#{year}"}
+  %table{class: "table is-striped hiddable_content"}
+    %thead
+      -(0..11).each do |i|
+        %th= data.accidents[0][i]
+      - data.accidents.delete_at(0)
+    %tbody
+      - data.accidents.each do |accident|
+        %tr{ (accident[5] == "BICICLETA" || accident[10] == "BICICLETA") ? {class: "is-selected"} : {}}
+          -(0..11).each do |i|
+            %td= accident[i]

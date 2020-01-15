@@ -1,20 +1,20 @@
-var ctx = $("#chart").get(0).getContext("2d");
+var ctx = document.getElementById("chart").getContext("2d");
 
-var total2012 = parseInt($("#2012total").text().trim());
-var total2013 = parseInt($("#2013total").text().trim());
-var total2014 = parseInt($("#2014total").text().trim());
-var total2015 = parseInt($("#2015total").text().trim());
-var total2016 = parseInt($("#2016total").text().trim());
-var total2017 = parseInt($("#2017total").text().trim());
-var total2018 = parseInt($("#2018total").text().trim());
+var total2012 = parseInt(document.getElementById("2012total").innerHTML.trim());
+var total2013 = parseInt(document.getElementById("2013total").innerHTML.trim());
+var total2014 = parseInt(document.getElementById("2014total").innerHTML.trim());
+var total2015 = parseInt(document.getElementById("2015total").innerHTML.trim());
+var total2016 = parseInt(document.getElementById("2016total").innerHTML.trim());
+var total2017 = parseInt(document.getElementById("2017total").innerHTML.trim());
+var total2018 = parseInt(document.getElementById("2018total").innerHTML.trim());
 
-var bike2012 = parseInt($("#2012bikes").text().trim());
-var bike2013 = parseInt($("#2013bikes").text().trim());
-var bike2014 = parseInt($("#2014bikes").text().trim());
-var bike2015 = parseInt($("#2015bikes").text().trim());
-var bike2016 = parseInt($("#2016bikes").text().trim());
-var bike2017 = parseInt($("#2017bikes").text().trim());
-var bike2018 = parseInt($("#2018bikes").text().trim());
+var bike2012 = parseInt(document.getElementById("2012bikes").innerHTML.trim());
+var bike2013 = parseInt(document.getElementById("2013bikes").innerHTML.trim());
+var bike2014 = parseInt(document.getElementById("2014bikes").innerHTML.trim());
+var bike2015 = parseInt(document.getElementById("2015bikes").innerHTML.trim());
+var bike2016 = parseInt(document.getElementById("2016bikes").innerHTML.trim());
+var bike2017 = parseInt(document.getElementById("2017bikes").innerHTML.trim());
+var bike2018 = parseInt(document.getElementById("2018bikes").innerHTML.trim());
 
 var data = {
   labels: ["2012", "2013", "2014", "2015", "2016", "2017", "2018"],

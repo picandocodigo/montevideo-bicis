@@ -6,7 +6,38 @@ var OpenStreetMap_Mapnik = L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x
 });
 OpenStreetMap_Mapnik.addTo(map);
 
-$.getJSON("/bicicircuitos.geojson", function(data) {
+function loadJSON(path){
+  return new Promise(function(resolve, reject){
+    var obj = new XMLHttpRequest();
+    obj.open("GET", path, true);
+    obj.setRequestHeader("Accept", "application/json");
+
+    obj.onload = function(){
+      if(this.status === 200){
+        resolve(JSON.parse(obj.response));
+      } else {
+        reject({
+          status: this.status,
+          statusText: obj.statusText
+        });
+        if(this.status === 401){
+          location.reload(true)
+        }
+      }
+    }
+
+    obj.onerror = function(){
+      reject({
+        status: this.status,
+        statusText: obj.statusText
+      });
+    }
+    obj.send();
+  })
+}
+
+
+loadJSON("/bicicircuitos.geojson").then( function(data) {
   L.geoJson(data, {
     style:  function(feature){
       // De datos anteriores se asume:
@@ -50,7 +81,7 @@ var movete = new L.icon({
 });
 
 
-$.getJSON("/bicicletarios.geojson", function(data) {
+loadJSON("/bicicletarios.geojson").then( function(data) {
   L.geoJson(data, {
     pointToLayer: function(feature, latlng){
       return L.marker(latlng, {icon: bicicletario});
@@ -64,7 +95,7 @@ $.getJSON("/bicicletarios.geojson", function(data) {
   }).addTo(map);
 });
 
-$.getJSON("/talleres.geojson", function(data) {
+loadJSON("/talleres.geojson").then( function(data) {
   L.geoJson(data, {
     pointToLayer: function(feature, latlng){
       return L.marker(latlng, {icon: taller});
@@ -77,7 +108,7 @@ $.getJSON("/talleres.geojson", function(data) {
   }).addTo(map);
 });
 
-$.getJSON("/estaciones.geojson", function(data) {
+loadJSON("/estaciones.geojson").then( function(data) {
   L.geoJson(data, {
     pointToLayer: function(feature, latlng){
       return L.marker(latlng, {icon: movete});

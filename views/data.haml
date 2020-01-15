@@ -1,8 +1,8 @@
-%h2 Datos de personas fallecidas en accidentes de tránsito
-.row
-  .col-md-6.center
+%h2.title Datos de personas fallecidas en accidentes de tránsito
+.columns
+  .column.is-two-fifths
     <canvas id="chart" width="400" height="200"></canvas>
-  .col-md-6
+  .column
     %p
       Fuente:
       %a{href: 'http://unasev.gub.uy/inicio/sinatran/datos_abiertos/', target: '_blank'}
@@ -14,9 +14,10 @@
           http://unasev.gub.uy/inicio/sinatran/informes_siniestralidad_vial_uruguay/
 
 - [2018, 2017, 2016, 2015, 2014, 2013, 2012].each do |year|
-  .row
-    .col-md-12
+  .columns
+    .column.is-full
       = haml :year_data, locals: {data: data[year], year: year}
 
 %script{src: "js/Chart.min.js"}
+%script{src: "js/interactions.js"}
 %script{src: "js/data.js"}

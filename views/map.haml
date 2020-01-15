@@ -1,39 +1,42 @@
-%h1 Mapa
+%h1.title.is-2 Mapa
 %p
   El mapa cuenta con la siguiente información:
-  %ul
-    %li
-      Trayectos de los Bicicircuitos presentes en Montevideo. Los bicicircuitos están categorizados en:
-      %ul
-        %li
-          <span class='blue'>Ciclovías</span> (separación física en la calzada)
-        %li
-          <span class='green'>Bicisenda</span> (senda sobre vereda)
-        %li
-          <span class='red'>Calles 30 km/h</span>.
-      %li.bicicletario
-        Bicicletarios dónde se puede dejar "estacionada" la bicicleta particular. Se dispone información de la cantidad de módulos y si se encuentra en vereda o en calzada.
-      %li.movete
-        Estaciones <a href="http://movete.montevideo.gub.uy/" target="_blank">Movete</a> de préstamo de bicicletas públicas.
-      %li.talleres
-        Talleres particulares de reparación de bicicletas.
+  .content
+    %ul
+      %li
+        Trayectos de los Bicicircuitos presentes en Montevideo. Los bicicircuitos están categorizados en:
+        %ul
+          %li
+            <span class='blue'>Ciclovías</span> (separación física en la calzada)
+          %li
+            <span class='green'>Bicisenda</span> (senda sobre vereda)
+          %li
+            <span class='red'>Calles 30 km/h</span>.
+        %li.bicicletario
+          Bicicletarios dónde se puede dejar "estacionada" la bicicleta particular. Se dispone información de la cantidad de módulos y si se encuentra en vereda o en calzada.
+        %li.movete
+          Estaciones <a href="http://movete.montevideo.gub.uy/" target="_blank">Movete</a> de préstamo de bicicletas públicas.
+        %li.talleres
+          Talleres particulares de reparación de bicicletas.
 #map
 
 %p
   La información mostrada está basada en <a href="https://catalogodatos.gub.uy/dataset/bicicircuitos-bicicletarios-estaciones-y-talleres-de-reparacion" target="_blank">Datos Abiertos de la Intendencia de Montevideo</a>. Dichos datos se liberan en formato shapefile y son convertidos a GeoJSON para usarlos en este mapa. Pueden encontrar los datos en formato GeoJSON en los siguientes enlaces:
-%ul
-  %li
-    %a{href:"/bicicircuitos.geojson"}
-      Bicicircuitos
-  %li
-    %a{href:"/bicicletarios.geojson"}
-      Bicicletarios
-  %li
-    %a{href:"/estaciones.geojson"}
-      Estaciones Movete
-  %li
-    %a{href:"/talleres.geojson"}
-      Talleres de reparación
+
+.content
+  %ul
+    %li
+      %a{href:"/bicicircuitos.geojson"}
+        Bicicircuitos
+    %li
+      %a{href:"/bicicletarios.geojson"}
+        Bicicletarios
+    %li
+      %a{href:"/estaciones.geojson"}
+        Estaciones Movete
+    %li
+      %a{href:"/talleres.geojson"}
+        Talleres de reparación
 %script{src: "js/leaflet.js"}
 %script{src: "js/easy-button.js"}
 %script{src: "js/map.js"}

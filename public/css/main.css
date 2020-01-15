@@ -1,4 +1,4 @@
-body{
+.main{
   background: url(/img/bg.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -6,25 +6,20 @@ body{
   background-size: cover;
 }
 
-.container.main{
-    background: #efefef;
-    padding-bottom: 40px;
+.section{
+  background: #efefef;
 }
 
 ol.letters{
   list-style-type: upper-alpha;
 }
-footer.footer .text{
-    margin: 40px 0;
-    text-align: center;
+
+footer{
+  padding: 2em;
 }
 
 footer{
-    width: 100%;
-}
-
-footer.footer .container{
-    background: #e7e7e7;
+  background: #e7e7e7;
 }
 
 #map{
@@ -38,53 +33,70 @@ footer.footer .container{
 .blue{color: #0000ff;}
 
 div.leaflet-popup-content h5{
-    font-weight: bold;
+  font-weight: bold;
 }
 
 li.bicicletario{
-    list-style: url(/img/leaflet/btn-bicicletario.png)
+  list-style: url(/img/leaflet/btn-bicicletario.png)
 }
 
 li.movete{
-    list-style: url(/img/leaflet/btn-movete.png)
+  list-style: url(/img/leaflet/btn-movete.png)
 }
 
 li.talleres{
-    list-style: url(/img/leaflet/btn-taller.png)
+  list-style: url(/img/leaflet/btn-taller.png)
 }
 
 .year{
-    width: 100%;
-    background: #c8c9a7;
-    padding: 20px;
-    text-align: center;
+  width: 100%;
+  background: #c8c9a7;
+  padding: 20px;
+  text-align: center;
 }
 
 #picandocodigo img{
-    float: right;
-    margin: 40px;
+  float: right;
+  margin: 40px;
 }
 
 .center{
-    text-align: center;
+  text-align: center;
 }
 
 .highlight-law{
-    background: #ffd;
+  background: #ffd;
 }
 
 .table tbody{
-    font-size: 11px;
+  font-size: 11px;
 }
 
 ol.reglamento{
-    list-style-type: lower-latin;
-}
-
-table.table.data tbody{
-    font-size: 18px;
+  list-style-type: lower-latin;
 }
 
 #logo{
-    display:none;
+  display:none;
+}
+
+.hidden{
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  overflow: hidden;
+  height: 0;
+  display: none;
+}
+
+.visible{
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: opactiy 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+  height: auto;
+  display: block;
 }
