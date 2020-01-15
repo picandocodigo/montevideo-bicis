@@ -122,19 +122,27 @@ loadJSON("/estaciones.geojson").then( function(data) {
 });
 
 L.easyButton('<img src="/img/leaflet/btn-bicicletario.png">', function(btn, map){
-  $('.bicicletario').each(function(index, value){
-    $(this).toggle();
+  document.querySelectorAll('.bicicletario').forEach(function(button){
+    toggle(button);
   });
 }).addTo(map);
 
 L.easyButton('<img src="/img/leaflet/btn-taller.png">', function(btn, map){
-  $('.taller').each(function(index, value){
-    $(this).toggle();
+  document.querySelectorAll('.taller').forEach(function(button){
+    toggle(button);
   });
 }).addTo(map);
 
 L.easyButton('<img src="/img/leaflet/btn-movete.png">', function(btn, map){
-  $('.movete').each(function(index, value){
-    $(this).toggle();
+  document.querySelectorAll('.movete').forEach(function(button){
+    toggle(button);
   });
 }).addTo(map);
+
+function toggle(elem){
+  if(elem.style.display =='' || elem.style.display == 'block'){
+    elem.style.display = 'none';
+  }else {
+    elem.style.display = 'block';
+  }
+}
