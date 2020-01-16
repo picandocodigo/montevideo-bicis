@@ -18,26 +18,28 @@ Ver en http://localhost:9393
 
 ### Básico:
 
-Mostrar mapa con infraestructura vial en Montevideo.
+- [x]  Mostrar mapa con infraestructura vial en Montevideo.
 
-Mostrar la cantidad de accidentes de tránsito por año que involucren bicicletas y causas. Mostrar en un mapa la intersección (en lo posible, si no lo encuentra automáticamente, poder editar la ubicación).
+- [x] Mostrar la cantidad de accidentes de tránsito por año que involucren bicicletas y causas.
 
-### Otros
-Agregar información (noticias, artículos, etc.) que van sacando los entes sobre el tema. En UNASEV hay montón de PDF's para procesar y ver qué más información pueden dar.
+- [ ] Mostrar en un mapa la intersección (en lo posible, si no lo encuentra automáticamente, poder editar la ubicación) de accidentes de tránsito involucrando bicicletas.
+
+- [ ] Agregar información (noticias, artículos, etc.) publicadas por los entes y gobierno sobre el tema. (Ver PDF's [en UNASEV](https://www.gub.uy/unidad-nacional-seguridad-vial/datos-y-estadisticas/estadisticas) por ejemplo).
 
 ## Datos
 
-Acá algunos de los datos que vengo encontrando:
+Algunos de los datos que vengo encontrando:
 
-  * https://catalogodatos.gub.uy/dataset/bicicircuitos-bicicletarios-estaciones-y-talleres-de-reparacion
-  * [2012](http://unasev.gub.uy/inicio/sinatran/datons_abiertos/2012/) - Fallecidos 2012
-  * [2011](http://unasev.gub.uy/inicio/sinatran/datos_abiertos/2011/) - Heridos y Fallecidos, Fallecidos por Departamento por mes, Fallecidos por Jurisdicción.
+  * [Bicicircuitos, bicicletarios, estaciones y talleres de reparación, Montevideo](https://catalogodatos.gub.uy/dataset/intendencia-montevideo-bicicircuitos-bicicletarios-estaciones-y-talleres-de-reparacion)
+  * [2013-2018](https://catalogodatos.gub.uy/dataset/unasev-fallecidos_siniestros_transito)  Fallecidos en siniestros de tránsito por año 2013 - 2018.
+  * [2012](https://catalogodatos.gub.uy/dataset/unasev-serie-de-personas-fallecidas-en-siniestros-de-tr-nsito-en-el-a-o-2012-en-uruguay) - Fallecidos 2012
+  * [2011](https://catalogodatos.gub.uy/dataset/unasev-siniestros-de-tr-nsito-en-uruguay-en-el-a-o-2011) - Heridos y Fallecidos, Fallecidos por Departamento por mes, Fallecidos por Jurisdicción.
 
 Se pueden pedir más datos comunicándonos con UNASEV directamente o a través de [Qué Sabés](http://quesabes.org/)
 
 ## Mapa
 
-Basado en los [datos abiertos de la IM](https://catalogodatos.gub.uy/dataset/bicicircuitos-bicicletarios-estaciones-y-talleres-de-reparacion), convertir a GeoJson con `gdal-bin`:
+Basado en los [datos abiertos de la Intendencia de MontevideoM](https://catalogodatos.gub.uy/dataset/intendencia-montevideo-bicicircuitos-bicicletarios-estaciones-y-talleres-de-reparacion), convertir a GeoJson con `gdal-bin`:
 
 ```
 $ sudo apt-get install gdal-bin
