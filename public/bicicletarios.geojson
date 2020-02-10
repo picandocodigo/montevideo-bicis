@@ -65,6 +65,7 @@
 { "type": "Feature", "properties": { "GID": 70.0, "CANTIDAD": 10, "OBSERVACIO": "ClasificaciÃ³n: larga estadÃ­a\nHorario: 05-21hs", "NOMBRE_UBI": "Terminal ColÃ³n", "ACTIVO": "Si", "UBIC_BICIC": "Vereda" }, "geometry": { "type": "Point", "coordinates": [ -56.221783737619198, -34.79975011988823 ] } },
 { "type": "Feature", "properties": { "GID": 71.0, "CANTIDAD": 8, "OBSERVACIO": "ClasificaciÃ³n: Corta estadÃ­a", "NOMBRE_UBI": "Terminal Cerro", "ACTIVO": "Si", "UBIC_BICIC": "Vereda" }, "geometry": { "type": "Point", "coordinates": [ -56.249222577967217, -34.873725635609027 ] } },
 { "type": "Feature", "properties": { "GID": 72.0, "CANTIDAD": 24, "OBSERVACIO": "ClasificaciÃ³n: corta estadÃ­a", "NOMBRE_UBI": "TerminaÃ± ColÃ³n", "ACTIVO": "Si", "UBIC_BICIC": "Vereda" }, "geometry": { "type": "Point", "coordinates": [ -56.22411968457758, -34.7986724762374 ] } },
-{ "type": "Feature", "properties": { "GID": 75.0, "CANTIDAD": 24, "OBSERVACIO": "ClasificaciÃ³n: corta estadÃ­a", "NOMBRE_UBI": "Terminal ColÃ³n", "ACTIVO": "Si", "UBIC_BICIC": "Vereda" }, "geometry": { "type": "Point", "coordinates": [ -56.221478410113548, -34.799535352183703 ] } }
+  { "type": "Feature", "properties": { "GID": 75.0, "CANTIDAD": 24, "OBSERVACIO": "ClasificaciÃ³n: corta estadÃ­a", "NOMBRE_UBI": "Terminal ColÃ³n", "ACTIVO": "Si", "UBIC_BICIC": "Vereda" }, "geometry": { "type": "Point", "coordinates": [ -56.221478410113548, -34.799535352183703 ] } },
+  { "type": "Feature", "properties": { "GID": 1001.0, "CANTIDAD": 6, "OBSERVACIO": "Rampa por Pasaje Ernesto Laroche", "NOMBRE_UBI": "Museo Nacional de Artes Visuales", "ACTIVO": "Si", "UBIC_BICIC": "Exterior del museo, dentro del jardín" }, "geometry": { "type": "Point", "coordinates": [ -56.16544, -34.91398 ] } }
 ]
 }
