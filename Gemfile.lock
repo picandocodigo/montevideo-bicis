@@ -6,7 +6,7 @@ GEM
       temple (>= 0.8.0)
       tilt
     mustermann (1.0.3)
-    rack (2.0.8)
+    rack (2.2.3)
     rack-protection (2.0.5)
       rack
     shotgun (0.9.2)
