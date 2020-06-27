@@ -1,6 +1,9 @@
+const years = ['2019', '2018', '2017', '2016', '2015', '2014', '2013', '2012']
 document.addEventListener('DOMContentLoaded', () => {
-  document.getElementById("btn_2018").addEventListener("click", function(){
-    toggleVisible('table_2018');
+  years.forEach(function(year){
+    document.getElementById("btn_" + year).addEventListener("click", function(){
+      toggleVisible('table_' + year);
+    });
   });
 
   function toggleVisible(id){
