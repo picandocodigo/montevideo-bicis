@@ -1,4 +1,4 @@
-Fechayhora;"Departamento";"Localidad";"Jurisdiccion ";"TipodeSiniestro";"Vehiculo";"Rol";Edad;"Sexo";FallecidoalosDias;"Otrovehiculo";"LugardelSiniestro";"X";"Y"
+Fecha y hora;"Departamento";"Localidad";"Jurisdicción";"Tipo de Siniestro";"Vehículo";"Rol";Edad;"Sexo";Fallecido a los Días;"Otro vehículo";"Lugar del Siniestro";"X";"Y"
 2019-01-02 13:30:00;"CANELONES";"PARQUE DEL PLATA";"NACIONAL";"ATROPELLO DE PEATÓN";"PEATÓN";"PEATÓN";28;"F";10;"AUTO";"RUTA INTERBALNEARIA KM 51;000";"618263.27";"6153928.04"
 2019-01-02 20:40:00;"TACUAREMBO";"N/C";"NACIONAL";"COLISIÓN ENTRE VEHÍCULOS";"BICICLETA";"CONDUCTOR";51;"M";0;"CAMIONETA";"RUTA 26 KM 239;000";"601343.35";"6492627.09"
 2019-01-04 12:30:00;"TACUAREMBO";"N/C";"NACIONAL";"COLISIÓN ENTRE VEHÍCULOS";"MOTO";"CONDUCTOR";60;"M";0;"CAMIONETA";"RUTA 26 KM 327;000";"670869.41";"6448843.47"
