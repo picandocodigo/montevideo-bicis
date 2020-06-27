@@ -19,7 +19,8 @@ get '/accidentes' do
       2015 => DeadPeople.new(2015),
       2016 => DeadPeople.new(2016),
       2017 => DeadPeople.new(2017),
-      2018 => DeadPeople.new(2018)
+      2018 => DeadPeople.new(2018),
+      2019 => DeadPeople.new(2019)
     },
     current_page: 'data',
     title: 'Datos de accidentes de tránsito en bicicleta'

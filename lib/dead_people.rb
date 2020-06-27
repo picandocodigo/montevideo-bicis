@@ -26,13 +26,14 @@ class DeadPeople
   # Each year has a different column for vehicle type and accident type:
   def metadata
     {
-      2012 => {bike_col: 3, fall_col: 7},
-      2013 => {bike_col: 4, fall_col: 3},
-      2014 => {bike_col: 5, fall_col: 4},
-      2015 => {bike_col: 5, fall_col: 4},
-      2016 => {bike_col: 5, fall_col: 4},
-      2017 => {bike_col: 4, fall_col: 3},
-      2018 => {bike_col: 5, fall_col: 4}
+      2012 => { bike_col: 3, fall_col: 7 },
+      2013 => { bike_col: 4, fall_col: 3 },
+      2014 => { bike_col: 5, fall_col: 4 },
+      2015 => { bike_col: 5, fall_col: 4 },
+      2016 => { bike_col: 5, fall_col: 4 },
+      2017 => { bike_col: 4, fall_col: 3 },
+      2018 => { bike_col: 5, fall_col: 4 },
+      2019 => { bike_col: 5, fall_col: 4 }
     }
   end
 end
