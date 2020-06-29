@@ -36,15 +36,15 @@ div.leaflet-popup-content h5{
   font-weight: bold;
 }
 
-li.bicicletario{
+li.bicicletario-l{
   list-style: url(/img/leaflet/btn-bicicletario.png)
 }
 
-li.movete{
+li.movete-l{
   list-style: url(/img/leaflet/btn-movete.png)
 }
 
-li.talleres{
+li.talleres-l{
   list-style: url(/img/leaflet/btn-taller.png)
 }
 
