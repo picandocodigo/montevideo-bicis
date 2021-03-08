@@ -14,12 +14,10 @@
             <span class='red'>Calles 30 km/h</span>.
         %li.bicicletario-l
           Bicicletarios dónde se puede dejar "estacionada" la bicicleta particular. Se dispone información de la cantidad de módulos y si se encuentra en vereda o en calzada.
-        %li.talleres-l
-          Talleres particulares de reparación de bicicletas.
 #map
 
 %p
-  La información mostrada está basada en <a href="https://catalogodatos.gub.uy/dataset/bicicircuitos-bicicletarios-estaciones-y-talleres-de-reparacion" target="_blank">Datos Abiertos de la Intendencia de Montevideo</a>.
+  La información mostrada está basada en <a href="https://catalogodatos.gub.uy/dataset/intendencia-montevideo-bicicircuitos-bicicletarios-estaciones-y-talleres-de-reparacion" target="_blank">Datos Abiertos de la Intendencia de Montevideo</a>.
 %p
   Dichos datos se liberan en formato shapefile y son convertidos a GeoJSON para usarlos en este mapa. Se pueden encontrar los datos en formato GeoJSON en los siguientes enlaces:
 
@@ -31,12 +29,6 @@
     %li
       %a{href:"/bicicletarios.geojson"}
         Bicicletarios
-    %li
-      %a{href:"/estaciones.geojson"}
-        Estaciones Movete
-    %li
-      %a{href:"/talleres.geojson"}
-        Talleres de reparación
 %script{src: "js/leaflet.js"}
 %script{src: "js/easy-button.js"}
 %script{src: "js/map.js"}

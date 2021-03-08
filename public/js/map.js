@@ -62,16 +62,6 @@ var bicicletario = new L.icon({
   className: 'bicicletario'
 });
 
-var taller = new L.icon({
-  iconUrl: '/img/leaflet/taller.png',
-  iconSize: [30, 30],
-  iconAnchor: [30, 30],
-  popupAnchor: [-3, -76],
-  shadowUrl: '/img/leaflet/icons-shadow.png',
-  className: 'taller'
-});
-
-
 loadJSON("/bicicletarios.geojson").then( function(data) {
   L.geoJson(data, {
     pointToLayer: function(feature, latlng){
@@ -86,27 +76,8 @@ loadJSON("/bicicletarios.geojson").then( function(data) {
   }).addTo(map);
 });
 
-loadJSON("/talleres.geojson").then( function(data) {
-  L.geoJson(data, {
-    pointToLayer: function(feature, latlng){
-      return L.marker(latlng, {icon: taller});
-    },
-    onEachFeature: function(feature, layer){
-      var bicicletarioPopup = "<h5>Taller</h5><br>" +
-          "Nombre: " + feature.properties.NOMBRE;
-      layer.bindPopup(bicicletarioPopup, {offset: new L.Point(-15, -25)});
-    }
-  }).addTo(map);
-});
-
 L.easyButton('<img src="/img/leaflet/btn-bicicletario.png">', function(btn, map){
   document.querySelectorAll('.bicicletario').forEach(function(button){
-    toggle(button);
-  });
-}).addTo(map);
-
-L.easyButton('<img src="/img/leaflet/btn-taller.png">', function(btn, map){
-  document.querySelectorAll('.taller').forEach(function(button){
     toggle(button);
   });
 }).addTo(map);
