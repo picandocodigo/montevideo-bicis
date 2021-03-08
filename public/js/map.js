@@ -71,15 +71,6 @@ var taller = new L.icon({
   className: 'taller'
 });
 
-var movete = new L.icon({
-  iconUrl: '/img/leaflet/movete.png',
-  iconSize: [30,30],
-  iconAnchor: [30, 30],
-  popupAnchor: [0, -76],
-  shadowUrl: '/img/leaflet/icons-shadow.png',
-  className: 'movete'
-});
-
 
 loadJSON("/bicicletarios.geojson").then( function(data) {
   L.geoJson(data, {
@@ -108,19 +99,6 @@ loadJSON("/talleres.geojson").then( function(data) {
   }).addTo(map);
 });
 
-loadJSON("/estaciones.geojson").then( function(data) {
-  L.geoJson(data, {
-    pointToLayer: function(feature, latlng){
-      return L.marker(latlng, {icon: movete});
-    },
-    onEachFeature: function(feature, layer){
-      var bicicletarioPopup = "<h5>Estación \"Movete\"</h5><br>" +
-          "Cantidad: " + feature.properties.CANTIDAD;
-      layer.bindPopup(bicicletarioPopup, {offset: new L.Point(-15, -25)});
-    }
-  }).addTo(map);
-});
-
 L.easyButton('<img src="/img/leaflet/btn-bicicletario.png">', function(btn, map){
   document.querySelectorAll('.bicicletario').forEach(function(button){
     toggle(button);
@@ -129,12 +107,6 @@ L.easyButton('<img src="/img/leaflet/btn-bicicletario.png">', function(btn, map)
 
 L.easyButton('<img src="/img/leaflet/btn-taller.png">', function(btn, map){
   document.querySelectorAll('.taller').forEach(function(button){
-    toggle(button);
-  });
-}).addTo(map);
-
-L.easyButton('<img src="/img/leaflet/btn-movete.png">', function(btn, map){
-  document.querySelectorAll('.movete').forEach(function(button){
     toggle(button);
   });
 }).addTo(map);
